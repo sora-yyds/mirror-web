@@ -42,7 +42,7 @@
 					<div class="col-lg-4 {% if page.legacy %}col-4{% else %}col-12{% endif %}">
 						<div class="spacing d-none d-lg-block"></div>
 					{% endunless %}
-						<div id="news" {%if site.issue%}class="col-lg-3"{%endif%}>
+						<!-- <div id="news" {%if site.issue%}class="col-lg-3"{%endif%}>
 							<h4>{% fa_svg fas.fa-bullhorn %} 新闻公告 </h4>
 							<ul>
 								{% for news in site.categories.news limit: 3%}
@@ -72,27 +72,27 @@
 									获取下载链接
 								</button>
 							</div>
-						</div>
+						</div> -->
 						{% endunless %}
 						<div class="thuhidden {%if site.issue%}col-lg-3{%endif%}">
 							<h4> {% fa_svg far.fa-envelope %} 联系我们 </h4>
 							<ul>
-								<li><strong>意见反馈</strong> <br /> <a href="https://github.com/tuna/issues">https://github.com/tuna/issues</a></li>
-								<li><strong>发送邮件</strong> <br /> <a class="eib1gieB"></a></li>
-								<li><strong>在线交流</strong> <br /> <a href="https://web.libera.chat/#tuna"> #tuna at Libera.Chat </a></li>
+								<li><strong>意见反馈</strong> <br /> <a href="https://github.com/sora-yyds/mirror-web/issues">https://github.com/sora-yyds/issues</a></li>
+								<!-- <li><strong>发送邮件</strong> <br /> <a class="eib1gieB"></a></li> -->
+								<li><strong>在线交流</strong> <br /> <a href="https://pd.qq.com/s/4qi68oyhi"> #QQ 频道 </a></li>
 							</ul>
 						</div>
 						<div {%if site.issue%}class="col-lg-2"{%endif%}>
 							<h4> {% fa_svg fas.fa-arrow-up-right-from-square %} 相关链接 </h4>
 							<ul>
-								<li><a href="/help/">使用帮助</a></li>
+								<!-- <li><a href="/help/">使用帮助</a></li> -->
 								{% unless site.issue %}
 								<li><a href="/status/#server-status">服务器状态</a></li>
 								<li><a href="/status/#syncing-status">同步状态</a></li>
 								{% endunless %}
-								<li class="thuhidden"><a href="https://tuna.moe/">清华大学 TUNA 协会</a></li>
+								<!-- <li class="thuhidden"><a href="https://tuna.moe/">清华大学 TUNA 协会</a></li>
 								<li><a href="https://github.com/tuna/tunasync">镜像管理器源码</a></li>
-								<li><a href="https://github.com/tuna/tunasync-scripts">自定义镜像脚本</a></li>
+								<li><a href="https://github.com/tuna/tunasync-scripts">自定义镜像脚本</a></li> -->
 							</ul>
 						</div>
 						{% unless site.hide_mirrorz %}
@@ -100,23 +100,24 @@
 							<h4> {% fa_svg fas.fa-paperclip %} 友情链接 </h4>
 							<ul>
 								<li><a href="{{ site.mirrorz_link }}">{{ site.mirrorz_desc }}</a></li>
+								<li><a href="{{ site.mirrorz_link1 }}">{{ site.mirrorz_desc1 }}</a></li>
+								<li><a href="{{ site.mirrorz_link2 }}">{{ site.mirrorz_desc2 }}</a></li>
 							</ul>
 						</div>
 						{% endunless %}
 					{% unless site.issue %}
-					</div>
-					{% endunless %}
-				</div>
-			</div><!--/container -->
-		</div><!--/mirrors -->
-		{% include footer.html %}
-		{% unless page.legacy or site.issue %}
-		<!-- iso download wizard modal -->
-		<!-- Modal -->
-		<div class="modal fade" id="isoModal" tabindex="-1" role="dialog" aria-labelledby="isoModalLabel" aria-hidden="true">
-		</div><!-- /iso download wizard modal -->
-		{% endunless %}
-	</body>
+				{% endunless %}
+			</div>
+		</div><!--/container -->
+	</div><!--/mirrors -->
+	{% include footer.html %}
+	{% unless page.legacy or site.issue %}	
+	<!-- iso download wizard modal -->
+	<!-- Modal -->
+	<div class="modal fade" id="isoModal" tabindex="-1" role="dialog" aria-labelledby="isoModalLabel" aria-hidden="true">
+	</div><!-- /iso download wizard modal -->
+	{% endunless %}
+</body>
 </html>
 <!--
 	vim: ts=2 sts=2 sw=2 noexpandtab

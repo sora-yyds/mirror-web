@@ -10,26 +10,21 @@
 						{% else %}
 						<source
 						{% endif %}
-							srcset="/static/img/logo-small-dark.png 1x,
-											/static/img/logo-small-dark@2x.png 2x,
-											/static/img/logo-small-dark@3x.png 3x,
-											/static/img/logo-small-dark@4x.png 4x"
+							srcset="/static/img/logo-small-dark.png,
+											/static/img/logo-small-dark.png,
+											/static/img/logo-small-dark.png,
+											/static/img/logo-small-dark.png"
 						{% if site.issue %}
 							alt=""/>
 						{% else %}
 							media="(prefers-color-scheme: dark)"/>
 						{% endif %}
 						{% unless site.issue %}
-						<img src="/static/img/logo-small.png"
-							srcset="/static/img/logo-small.png 1x,
-											/static/img/logo-small@2x.png 2x,
-											/static/img/logo-small@3x.png 3x,
-											/static/img/logo-small@4x.png 4x"
-							alt=""/>
+						<img src="/static/img/logo-small.png" alt="" width="10%" height="10%">
 						{% endunless %}
 					</picture>
 					{% endif %}
-					{{ site.school }}</span>开源软件镜像站
+					{{ site.school }}</span>软件镜像站
 			</a>
     </div>
 		{% unless page.legacy %}
@@ -40,11 +35,11 @@
     <div class="{% unless page.legacy %}navbar-collapse collapse {% endunless %} justify-content-end" id="navbarNavDropdown">
       <ul class="nav navbar-nav" role="menubar">
         {% unless site.hide_navbar %}
-        <li role="none" class="nav-item"><a role="menuitem" class="nav-link" href="{{ site.homelink }}">HOME</a></li>
-        <li role="none" class="nav-item"><a role="menuitem" class="nav-link" href="https://tuna.moe/events/">EVENTS</a></li>
-        <li role="none" class="nav-item"><a role="menuitem" class="nav-link" href="https://tuna.moe/blog/">BLOG</a></li>
-        <li role="none" class="nav-item"><a role="menuitem" class="nav-link" href="https://tuna.moe/feed.xml">RSS</a></li>
-        <li role="none" class="nav-item"><a role="menuitem" class="nav-link" href="https://podcast.tuna.moe/">PODCAST</a></li>
+        <li role="none" class="nav-item"><a role="menuitem" class="nav-link" href="{{ site.homelink }}">Blog</a></li>
+        <li role="none" class="nav-item"><a role="menuitem" class="nav-link" href="https://cloud.s-o-r-a.top/">Cloud</a></li>
+        <li role="none" class="nav-item"><a role="menuitem" class="nav-link" href="https://res.s-o-r-a.top/">Resources</a></li>
+        <!-- <li role="none" class="nav-item"><a role="menuitem" class="nav-link" href="https://tuna.moe/feed.xml">RSS</a></li>
+        <li role="none" class="nav-item"><a role="menuitem" class="nav-link" href="https://podcast.tuna.moe/">PODCAST</a></li> -->
         <li role="none" class="nav-item"><a role="menuitem" class="nav-link active" aria-checked="true" href="{{ site.url }}">MIRRORS</a></li>
         {% endunless %}
       </ul>

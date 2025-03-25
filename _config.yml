@@ -1,17 +1,17 @@
 # Site settings
 
-title: 清华大学开源软件镜像站
+title: 软件镜像站
 # title: 北京外国语大学开源软件镜像站
-school: 清华大学
+school: 
 # school: 北京外国语大学
-brand: Tsinghua Open Source Mirror
-operator: 清华大学信息化技术中心
-author: Tsinghua University TUNA Association
-desc: 致力于为国内和校内用户提供高质量的开源软件镜像、Linux 镜像源服务，帮助用户更方便地获取开源软件。本镜像站由清华大学 TUNA 协会负责运行维护。
+brand: Software Mirror
+operator: --sora--
+author: --sora--
+desc: 本站由--sora--提供技术支持，并由--sora--运行维护。
 # operator: 北外信息技术中心
 logo: true
 meow_404: true
-issue_tag: tuna
+issue_tag: sora-yyds
 baseurl: "" # the subpath of your site, e.g. /blog
 permalink: "/:categories/:title/"
 url: "https://mirrors.tuna.tsinghua.edu.cn"
@@ -21,32 +21,46 @@ urlv6: "https://mirrors6.tuna.tsinghua.edu.cn"
 aosp: "aosp.tuna.tsinghua.edu.cn"
 arch_archive: "arch-archive.tuna.tsinghua.edu.cn"
 pypi: "pypi.tuna.tsinghua.edu.cn"
-homelink: "https://tuna.moe"
+homelink: "https://s-o-r-a.top/"
 hide_navbar: false
 hide_download: false
 hide_server_status: false
 
 hide_mirrorz: false
-mirrorz_desc: 校园网联合镜像站
-mirrorz_link: "https://mirrors.cernet.edu.cn/list"
+mirrorz_desc: --sora--のblog
+mirrorz_link: "https://s-o-r-a.top/"
+mirrorz_help_link: "https://help.mirrors.cernet.edu.cn/"
+
+mirrorz_desc1: --sora--のcloud
+mirrorz_link1: "https://cloud.s-o-r-a.top/"
+mirrorz_help_link: "https://help.mirrors.cernet.edu.cn/"
+
+mirrorz_desc2: --sora--の素材库
+mirrorz_link2: "https://res.s-o-r-a.top/"
 mirrorz_help_link: "https://help.mirrors.cernet.edu.cn/"
 
 sponsors:
     megvii:
-        name: "旷视科技有限公司"
-        link: "https://megvii.com/"
-        short: "旷视"
-        eng: "Megvii Technology Ltd."
-        logo: "megvii-s"
+        name: "甲骨文股份有限公司"
+        link: "https://www.oracle.com/"
+        short: "甲骨文"
+        eng: "Oracle"
+        logo: "Oracle"
     huawei:
-        name: "华为技术有限公司"
-        link: "https://huawei.com/"
-        short: "华为"
-        eng: "Huawei Technologies Co., Ltd."
-        logo: "huawei"
+        name: "清华大学 TUNA 协会"
+        link: "https://tuna.moe/"
+        short: "TUNA协会"
+        eng: "Tsinghua University Network Administrators"
+        logo: "tuna-small"
+
+sponsor:
+  - megvii
+  - huawei
 
 poweredbys:
-    kunpeng: "海思<sup>®</sup> Kunpeng<sup>®</sup> 920 处理器"
+    Oracle: "ARM Neoverse N1 处理器"
+
+poweredby: "Oracle"
 
 
 # ==================================

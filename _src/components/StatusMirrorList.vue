@@ -24,11 +24,11 @@ onMounted(() => {
   <table class="table text-break table-hover table-borderless">
     <thead>
       <tr class="d-none d-lg-table-row d-b3-table-row">
-        <th class="col-2">Name</th>
-        <th class="col-4" colspan="2">Last Update</th>
-        <th class="col-4">Upstream</th>
-        <th class="col-1">Status</th>
-        <th class="col-1">Size</th>
+        <th class="col-2">名称</th>
+        <th class="col-4" colspan="2">更新日期</th>
+        <th class="col-4">来源</th>
+        <th class="col-1">状态</th>
+        <th class="col-1">大小</th>
       </tr>
     </thead>
     <tbody
@@ -82,16 +82,16 @@ onMounted(() => {
           <div class="tuna-roll">
             &nbsp;
             <template v-if="mir.last_ended_ts == mir.last_update_ts">
-              <div data-tuna-roll-seq="0 1 2 3">Last Successful Sync</div>
+              <div data-tuna-roll-seq="0 1 2 3">上次成功同步</div>
             </template>
             <template v-else>
-              <div data-tuna-roll-seq="0 1">Last Successful Sync</div>
-              <div data-tuna-roll-seq="2 3">Last Attempted Sync</div>
+              <div data-tuna-roll-seq="0 1">上次成功同步</div>
+              <div data-tuna-roll-seq="2 3">上次尝试同步</div>
             </template>
             <div v-if="mir.status == 'syncing'" data-tuna-roll-seq="4 5">
-              Sync Started
+              同步已开始
             </div>
-            <div v-else data-tuna-roll-seq="4 5">Next Scheduled Sync</div>
+            <div v-else data-tuna-roll-seq="4 5">下次计划同步</div>
           </div>
         </td>
         <td
@@ -128,11 +128,11 @@ onMounted(() => {
             </div>
           </div>
         </td>
-        <th class="col-4 d-lg-none d-bs3-def-none text-end">Upstream</th>
+        <th class="col-4 d-lg-none d-bs3-def-none text-end">来源</th>
         <td class="col-8 col-lg-4">{{ mir.upstream }}</td>
-        <th class="col-4 d-lg-none d-bs3-def-none text-end">Status</th>
+        <th class="col-4 d-lg-none d-bs3-def-none text-end">状态</th>
         <td class="col-8 col-lg-1">{{ mir.status }}</td>
-        <th class="col-4 d-lg-none d-bs3-def-none text-end">Size</th>
+        <th class="col-4 d-lg-none d-bs3-def-none text-end">大小</th>
         <td class="col-8 col-lg-1">{{ mir.size }}</td>
       </tr>
     </tbody>

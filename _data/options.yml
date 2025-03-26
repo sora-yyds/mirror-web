@@ -463,7 +463,7 @@ unlisted_mirrors:
     name: "tuna"
     url: '/tuna/'
     upstream: 'cloud.tsinghua.edu.cn'
-    is_master: true
+    is_master: false
   - link_to: 'sourceware'
     last_update: '-'
     name: "cygwin"

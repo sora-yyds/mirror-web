@@ -21,7 +21,7 @@ const nowBrowsingMirror = computed(() => {
 
 <template>
   <template v-if="nowBrowsingMirror">
-    <strong>Last Update:&nbsp;</strong>
+    <strong>上次更新:&nbsp;</strong>
     <UpdateField :mir="nowBrowsingMirror"></UpdateField>
   </template>
 </template>

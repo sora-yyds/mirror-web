@@ -16,14 +16,14 @@ jsEntry: status
 			<h3 id="server-status"> # 服务器监控 </h3>
 			<h4> # 网络流量 </h4>
 			<div class="row">
-				{% include status-pic.html name="service_traffic_IPv4" %}
-				{% include status-pic.html name="service_traffic_IPv6" %}
+				{% include status-pic.html name="NetworkUsage" %}
+				{% include status-pic.html name="TCPconnections" %}
 			</div>
 			<h4># 磁盘状态 </h4>
 			<div class="row">
 				<div id="disk-usage"></div>
-				{% include status-pic.html name="diskstats_iops" %}
-				{% include status-pic.html name="diskstats_throughput" %}
+				{% include status-pic.html name="DiskIORequests" %}
+				{% include status-pic.html name="DiskIOBytes" %}
 			</div>
 			<h4># CPU / 内存</h4>
 			<div class="row">

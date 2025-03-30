@@ -7,15 +7,15 @@ school:
 brand: Software Mirror
 operator: --sora--
 author: --sora--
-desc: 本站由--sora--提供技术支持，并由--sora--运行维护。
+desc: 本站由--sora--创建并运行维护。
 # operator: 北外信息技术中心
 logo: true
 meow_404: true
 issue_tag: sora-yyds
 baseurl: "" # the subpath of your site, e.g. /blog
 permalink: "/:categories/:title/"
-url: "https://mirrors.tuna.tsinghua.edu.cn"
-hostname: "mirrors.tuna.tsinghua.edu.cn"
+url: "https://mirror.s-o-r-a.eu.org"
+hostname: "mirror.s-o-r-a.eu.org"
 urlv4: "https://mirrors4.tuna.tsinghua.edu.cn"
 urlv6: "https://mirrors6.tuna.tsinghua.edu.cn"
 aosp: "aosp.tuna.tsinghua.edu.cn"

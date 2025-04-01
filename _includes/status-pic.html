@@ -1,16 +1,35 @@
 <div class="col-lg-6 col-12">
-	<picture>
-	<source
-		srcset="/static/status/{{include.name}}.png 1x,
-						/static/status/{{include.name}}@2x.png 2x,
-						/static/status/{{include.name}}@3x.png 3x,
-						/static/status/{{include.name}}@4x.png 4x"
-		media="(prefers-color-scheme: dark)" />
-	<img class="img-thumbnail img-fluid w-100" src="/static/status/{{include.name}}.png"
-		srcset="/static/status/{{include.name}}.png 1x,
-						/static/status/{{include.name}}@2x.png 2x,
-						/static/status/{{include.name}}@3x.png 3x,
-						/static/status/{{include.name}}@4x.png 4x"
-	/>
-	</picture>
+    <picture>
+        {% assign img_path = "/static/status/" | append: include.name | append: ".png" %}
+        {% assign img_2x = "/static/status/" | append: include.name | append: "@2x.png" %}
+        {% assign img_3x = "/static/status/" | append: include.name | append: "@3x.png" %}
+        {% assign img_4x = "/static/status/" | append: include.name | append: "@4x.png" %}
+
+        {% assign has_2x = false %}
+        {% assign has_3x = false %}
+        {% assign has_4x = false %}
+
+        {% for file in site.static_files %}
+            {% if file.path == img_2x %}
+                {% assign has_2x = true %}
+            {% endif %}
+            {% if file.path == img_3x %}
+                {% assign has_3x = true %}
+            {% endif %}
+            {% if file.path == img_4x %}
+                {% assign has_4x = true %}
+            {% endif %}
+        {% endfor %}
+
+        {% if has_2x or has_3x or has_4x %}
+            <source srcset="{{ img_path }} 1x
+                            {% if has_2x %}, {{ img_2x }} 2x{% endif %}
+                            {% if has_3x %}, {{ img_3x }} 3x{% endif %}
+                            {% if has_4x %}, {{ img_4x }} 4x{% endif %}" 
+                    media="(prefers-color-scheme: dark)" />
+            <img class="img-thumbnail img-fluid w-100" src="{{ img_path }}" alt="{{ include.name }}">
+        {% else %}
+            <img class="img-thumbnail img-fluid w-100" src="{{ img_path }}" alt="{{ include.name }}">
+        {% endif %}
+    </picture>
 </div>
